@@ -1,0 +1,27 @@
+﻿<footer class="bg-dark text-light mt-5">
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Student Management System</h5>
+                <p>Manage your students and departments efficiently and easily.</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Links</h6>
+                <ul class="list-unstyled">
+                    <li><a href="/" class="text-light text-decoration-none">Home</a></li>
+                    <li><a asp-controller="Student" asp-action="All" class="text-light text-decoration-none">Students</a></li>
+                    <li><a asp-controller="Department" asp-action="All" class="text-light text-decoration-none">Departments</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h6>Contact</h6>
+                <p>Email: support@studentsystem.com</p>
+                <p>Phone: +20 100 123 4567</p>
+            </div>
+        </div>
+        <hr class="bg-light" />
+        <div class="text-center">
+            &copy; @DateTime.Now.Year Student Management System. All rights reserved.
+        </div>
+    </div>
+</footer>

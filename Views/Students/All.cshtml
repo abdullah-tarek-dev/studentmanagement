@@ -1,0 +1,48 @@
+﻿@model List<studentmanagement.Models.Student>
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h1>All Student </h1>
+
+<table class="table table-bordered ">
+
+	<thead>
+		<tr>
+			<td>Id</td>
+			<td>Name</td>
+			<td>Age</td>
+			<td>
+				@Html.DisplayNameFor(model => model[0].Email)
+			</td>
+
+			<td>DepartName</td>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (var student in Model)
+		{
+			<tr>
+				<td>@student.Id</td>
+				<td>@student.Name</td>
+				<td>@student.Age</td>
+				<td>
+					@Html.DisplayFor(modelItem => student.Email)
+				</td>
+
+				<td>@student.Dep?.Name</td>
+				 <td>
+					<a asp-action="Edit" asp-route-id="@student.Id" class="btn btn-sm btn-warning">Edit</a>
+				</td>
+				<td>
+
+					<a asp-action="Delete" asp-route-id="@student.Id" class="btn btn-danger">Delete</a>
+				</td> 
+
+			</tr>
+		}
+	</tbody>
+
+</table>
